@@ -1,0 +1,104 @@
+<!-- <div class="loginmain">
+  <nz-card style=" width:550px;height: 450px; background: #ffffff;
+  box-shadow: 
+    0px 2px 10px rgba(0,0,0,0.2), 
+    0px 10px 20px rgba(0,0,0,0.3), 
+    0px 30px 60px 1px rgba(0,0,0,0.5);border-radius: 25px;">
+    <form nz-form [formGroup]="validateForm">
+      <nz-form-item>
+        <h1><img src="../logo.PNG" alt="" style="height: 80px;"></h1>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="string">Username</nz-form-label>
+        <nz-form-control [nzSpan]="15">
+          <input nz-input type="string" formControlName="name">
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="email">E-mail</nz-form-label>
+        <nz-form-control [nzSpan]="15">
+          <input nz-input type="email" formControlName="email">
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="password">Password</nz-form-label>
+        <nz-form-control [nzSpan]="15">
+          <input nz-input type="password" formControlName="password">
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="password">Confirm Password</nz-form-label>
+        <nz-form-control [nzSpan]="15">
+          <input nz-input type="password" formControlName="checkPassword">
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6"></nz-form-label>
+        <nz-form-control [nzSpan]="15">
+          <button style="background-color: #003973;" nz-button [nzSize]="size" nzType="primary"
+            (click)="submitForm()">Register</button>
+          <button class="button2" nz-button [nzSize]="size" nzType="default" routerLink="/login">Login</button>
+        </nz-form-control>
+      </nz-form-item>
+
+    </form>
+  </nz-card>
+</div> -->
+
+
+
+<div class="bg" style="background-size: auto; background-image: url(https://www.textures.com/system/gallery/photos/Wood/Fine%20Wood/126382/WoodFine0086_7_350.jpg);">
+  <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip="Working...">
+    <div class="parent">
+      <div class="child" style="box-shadow: 
+      0px 2px 10px rgba(0,0,0,0.2), 
+      0px 10px 20px rgba(0,0,0,0.3), 
+      0px 30px 60px 1px rgba(0,0,0,0.5);border-radius: 25px;">
+        <div nz-row class="imgDiv">
+          <div nz-col nzSpan="8"><img style="margin-left: 100px;" width="100%" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUUFRUVEhYZFRgSGBIYGRgZFREYGBgcGRkZGRgYGBgcITAlHCErHxkYJjgnKy80NTU1GiQ7QDs0Py40NjEBDAwMEA8QHxISHzYrJSw0OjQ2NDY4NDQ0NDE2MTQ0NDQxNTQ0NDQ0NDQ0NzQ0PTQ0NDQ2NDQ0NDQ0NDQ0NDQ0Mf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAABBAMBAAAAAAAAAAAAAAAAAwQFBgECBwj/xABFEAACAQMBBQUECAMGBAcBAAABAgADBBEhBRIxQVEGEyJhcYGRobEHFDJCUmLB0XKS8CNDgqLh8TNjwtIWJERTc7LiFf/EABkBAQADAQEAAAAAAAAAAAAAAAACAwQBBf/EACcRAAICAgICAgEEAwAAAAAAAAABAhEDIRIxQVEEYSITFHGhMkKx/9oADAMBAAIRAxEAPwDsnCbQmvCAbQhCAEIQgBCEIAQhCAEIQgBCEIAQhCAEIQgBCEIAQhCAEIQgBCEIATEJmAa7o6CE2hACEIQDXhNoTXhANoQhACEIQDEISO2ntijbj+1cKeSjJY+ijX28J1Jvo45JK2SMJQdpdvm1FvSA/NUOf8in/qlXvu015UzvV2UHkmEA9q4PvMtjgm+9FEvkwXWzshYDUnEavtOgv2q1MetRB+s4NclnOahLnqxLH3mNmpjpJ/t/sh+6+j0Cu1bc8K9I+lSn+8dJUBGQQR1BB+U82PTHSJKCh3kJQjmpKn3jWceD7JL5H0em4TzxZdrL6hjcuahA5OwqD0w+ceyWjZX0s1VwLugtQfipEq2P4GJDH2rK3ikiyOWLOvzMruwe19neYFGqA5/unG5U9in7XqpIlhlbTXZYnZmEIQdCEIQAmDDMzAMTMIQAhCEAIQhACEIQDXhNoTXhAMxtd3aUlLVGCgczz8gOJPkIXVyEGupPAf1ylP29Reoe8JLYH2eSjqo+ctxY+T3pFGbNwWlbE9sdqqj5Wjmmv4vvn9B7NfOVOqCSSSSTqSSSSepJ4x8yRB0m+OOMFSR5csspu2xgyRB0jqtVRQSWAA4kkAD2mRtTa9EfZDVD+UYX3nHwzDaXZKKk+kZdIiyE8BmZG2qv93RRfNt5z8MRQbYvORRfRP3JkHKPstWOfoZVKZHEEewxsyyXO2r3myH1QfoYlU2xVP8AxaFJ/QMp953pzlF+TvCa8EO6Ru6SZe4tn+2j0T1HiX4Z+QiVXZ2RvU2WovVSM+6Kvo7dd6IR0+GvtHAy49mPpHurXdSuTc0hgYc/2qj8rn7WmdGzyGRKtUTGh0Ijd0lcop9l0JtdHpTYHaG3vU7y2cMBoynR0PRlOo+R5EyXnljZ20K1tUWtbu1N04MOY5qwOjKeh0ndOw3bmntBe7qAUrhRlqefC4HFqeeI6jiPManPODWzTGaZdJgwJhKyYTMIQAhCEAIQhACEIQAhCEAxG13chB1J4Dr/AKQvrtaSM7nAUZPU9APMnSQBu+9O/nIbh5DpLMcOW30VZMnHS7GdxWdHLMS6udf28sR4jhgGU5BmGAIwdQZWdv7a+o5CEOzqWCk6KOAdwNePDrNemvs8+pKXtMz2jenQw2QC+fAOJ/MOg9ZRbzbT1Du0xnz13B/3fKIAVryoSxZy5yc8W825ADpwEslpsdKWFGHccTjwr5KOZ8zIyytKi2OBXyaK7S2a7kNUJY8s8B6DgPZJi22OOksVrs7rJShYeUpczSoJFbpbJHSOV2UOks6WXlFls/KQ5E+JUm2UOkQq7JHSXU2flEXs/KOQ4nPrnY46SHuNlMh3kJU9Rp/vOn1rHykXdbN8pJTIOBzupXJ8Ndc9HUaj1H7e6NLi23dQd5TwYS3bQ2UDnSVq4tnpE4GVPFeXs6GXRnfZVLHXRFOkxQqPTZaiMUZGDIynDBhwKnlHrU1I3h9npzz08v090a1Rn+tB5CdaIpndPo97aC/Tu6uFuaQy6jQOvDvEHrjI5E9CJdZ5XsL2pb1UrUW3XpsGU/MEcwRkEcwTPR3ZTb9O+t0r09CfC6ZyUcY3kPvBB5gg85mnCto1QlyRNwhCVlgQhCAEIQgBCEIBiEJG7c2gLei9Xmowo6s2ij3kezM6lbo42krZUu2O1t+p3Knw0j4vzP8A/kaepPSRez780z1U8R+o85ECoSSSckkkk8STqSYsjz0oQUY8Tx8k5SnyLHtvbyW9DvdGLaIuftN59AOJ9OuJy+2p1bysWYlmdixY/Fj0AGgHTAiW0rxrmrhclB4UGvDrjqxA+AnQuzmyBRQDHibBY/p6CZ5yUdI24ot7Zta7PW3QLTHibiefmfTp6x5Z2Uc91vOfy6D9fjmSltbyhs0JCdvax9Tt4vSpR0lORslQ1ShFBRjtUm25OWdoZmjE2oSQ3Jg04sETUt4yr2snnpxtUpTtnKKneWXlK3tLZoOdJ0C5oSEv7XMkmRaOVX9syMSBpzHl5Ri6g8Jdtr2Oc6SmXFMoxHI8P2l8ZGeUfI1dJafo47RmyulWo2KNzupUBOitnwVPYTg+TE8hK6yxB0nZRtUchKnZ6rmZUfo522buyQuc1KB7qoTxJUDdY9d5SpJ656S2zI1To2J2rMwhCcOhCEIAQhCAYlA+kjaHipUAeANRvblU+T/CX+cY7WXveXlds6I+4PIIAh/zBj7Zdgjc79Gf5MqhXsaI8Y7fvNykVB1qeH2fePu09sXR5X9t1d+sE5IAPafEf+n3TZOVIw443ImexmzwWNV9BT1yeG8eHuH6TodiXf8A4Y3V/E3P0ErvZew3kTeHgGuPxtzY+Q0A9JerWnwmKT2ejBaG9rRkrRpxC2p4kjSSQZNGyJFlWCrFFE4SMBZnE2hOA1xMETeEASZYi6RyRNGWAR1anIu7oydqJGFzTkkRZTdp23GUTbtnxnT7+lxlM23b6GWRZXJFHt2yCOn9GZdJhxu1MdTj36ftHLJL1tGaWmW/6Itp91eNQY+G6QgD89MF1/yb/wAJ22eaNkXZt7ihWGndVKbn+EMN8e1cj2z0sJnyqnZpwyuNG0IQlRcEIQgBCEIBo5wCTynnw3Bdi541CXPqxyfnO87WfdoVmH3adQ+5SZ58ptoJp+P5MnyfA/R5X7XNSux47zNj2nA/STCvGXZKnvVM7obxU8nIBXxDUDnLcj0VYY7On7PfdK01UHdAA8WBgD0knR20iVlt6g3HfVQDvA6E8caZwePSVt711rblNQTg5LMVA8IOAQCc+zSbbDoCvdPUrkirbYXuguAuMgNv58epPTUjylHFdv0aFJ3S9k5trtG9q6BqCuKrMEIrEE43Qd4FPD9oczJHaW1rq3ptVa1puqAs25csWAHE4akMgeUq/wBID+KzIH36nHQfap8TyljsatepeV6d0ihDbqFRXLoVZ23zkhSSeB04Ae2NKk6O8pcmr/gk9sbfpWtFa1XPiC7qjVmYjO6v78JpSv7vcFR7ZQuMmmtZmrAcdAUCs35d4espna+or3mzghDUALUoQd5WD1QDun72VVPhOgX+0BSTvCjuozncCEqACSxBYaacsmRapL7JRk23vSGmytrPc2yXFGmuXL4RnKjC1GXVgra4GeHGMOzXaepeO6rbqi0iodmrkkZ3sbqhNdVPEiOezV/SdGFulQUwXbeYAKGqMHZR4iRq+cYwBzlb+jZtxr7f0w1MnUaAd6SSc9IpU9HOTtb7LNZbYrXAapa0kakGZUepVdDUKkqzKFRt1cggE6nHCNv/ABUQLvfoMjWVNHZWdcszb/hUgEbuFUhue9wGJWraw2lZZFiy3FuSXQeBtG1B3SQRn8rYPHnJfYW0VvXr0Luh3Vc00WpulhvorEhSp1XBc9chuMk4pb7RxSb09P8Ao22r2xrW9KlVrWgVa2cL9Yy4wA3iXu9Mg8M+uI/bbdwtdLepbKjVlqMjCuWRig3ipPd5HLOnPnK/9KVMmnbqOb1RqwGdMDU85eatslRqTsDvUWZl5YJVkIPUYY/Azj40nQXJyavqis2naitVuKlstsgeiHLE3DbnhKqcEU8nVhyir7TrC4ShWtwgqrUKutXfU7g3iuNxTnhx685XdntWXad69BEdiKwAd2RdGp5IIUk4OByGvESe2Md63t3uc96j1jqTkOz1UZeOuhYAa8NOE60kIuT8+f6IXau2XSutu1Fd6pgqRWOMEsAT4NPsnT5yB2vclWCVE3N7gVffX5Ajly5yR7TFv/6FuVGpSnuhjugnffQtriRu0ab1azLVAQ0QfApDZGhLbxOSOH3eUmktfwVuUtr7KTtpN18iOiMgHqAYdoaDAB8eEnGQVOvQ4Ohm1uMoh/KvylsCGXQ2qJPRXZ25NW1tqh41KNFj6lFJ+OZ59ZJ3XsK2bC28kx7mIHyledaRZ8d7ZYYQhMxqCEIQAhCEAY7ZXNvXHWlVH+Rp51pvoJ6UqoCCDwYEH26TzMFKEo3FCVPquh+ImjA+zN8hdD1Wm3ZGkyhnGDwAXXOVIOunCNkePuyb4Lp+Fz7joPlLcnRVi7LHZpU30fdUuveZVmdd7fxrkIekl02ZXFWpVosi98qgk75ZDjdJwPtcAw14jXAjnZ7AgZ1k/bU15aShyZoUEQnaTY1zdCkKaoBRdmBeo+8+d0DICafZydecnLz642Vp0qKb2hqGrUZgN3BCr3Q588ySopHiSF+Cahtv2Ve57OM9tb09Fq21Kkqvul03kVQcjQkZXIIwRocco7rU7yrT7tqdOmWBV3FVnUBhhjTTdBJ1OAxGNNdMSxLNpy2d4JdFd2Ns2ra0qqU1V/7TNMPUZFZSqDxMFYgjdI+zrjzkb2f2Hc27VS60274KHIqvoVDgbqlPFkNzI5dJdIm9VVxvMFycDJAyegzxMcmc4LX0VzZFldWtGnS3UrqgTHjKOvDwHeUhwOTZU8sRXZ2y3+sVLmsAHqKtNVXJVEVt7xMQCzE9AAMc+MsUJyzqikUjtpsK5vO7SmtNVptUO8zvk72PuhDjnz6SzJUrbjE01DneKqHYqcABQz7o3cnPI485ITBhytJBRSbfspVtsq7pXD3Hd0nNRaqlBWqADfdXBDd0c43cHIHGLVbe6epTaolJKdN9/dR6jMThtWyg18XvJzLW8aVVneVnFBIo22bCu9ejWCIopNqC75I3mb8Gmh9/WRm1aDGsaq4BKOpHjOpJIxgZPEjgOEvVzTHPWRNW33uA3RzP7dZNSZBwRzDbdqwt23tCHD672SAMaadesStE/s0/hT5CSnbuoArKvMogHpjPyMbCluqB+EAe4YmjFvZmzapDNknb+wy4sLYfkz72J/WcXdZ3Ts3RKWtuh4rRog+u4M/HMh8jpE/jdslIQhMpsCEIQAhCEAxPPHbO07i+uU4A1GcelTDjH8+PZPQ85B9Muzd2rRuQNKimk3TKEsntIZv5JZidSKsyuJQUeOdkVdy4PSovxH+x98j0ebu5G668UIImlq0ZYumdS2ZV4Sy2jyibFuwyqRwIBltsa3CZpI1xZY6Lx4jSKt6kf03kWTHambgxFWigaROm0gL2xpV69cVqaVNyhSC76q27vmqW3c8Cd1dR+EdJMVrtEx3jqm8cDeZVyegydYxH/Huf/gt/nXnVoi6dIcbIq71GkSct3dItrk5Kg6x9Kna2gRLI0cUnqKAzhQSwNIu28PvHKgjPAx9S2pUTvBUXfWg+69VSq6YVg25zIDDOPZ0nWvRxS1snSZqTAmJu0iTMO0btrmbO8bq/GdOCdWmvr6yLv6wVWJ4KCfdH9w8qHaPaI3SinT7x5acpKKsi3RSNsOatxSTjhi7ezX9CPbHrpGmxaZd6lc/fO4n8I4/Ie4ySZJuxxqJ5uadyG9raGrUSmP7x0T+ZgCfjO7quAAOU5f2E2fv3Qcjw0FLf4mBQD4sf8M6lM3yH+VGv4sfxcvZmEITOaghCEAIQhAMSvdttjfXLOrSUZcDfp/xpqo8s6r6MZYpiE6dnGrPKiP108jofaIurS1/Sl2d+q3RrUxildlmGBotTjUXyzneHq34ZTUebIytWZJxp0WDs9ebjbhOh1X9R+vvl92fdcJyqnUwQRylv2LtLeAB4jGf3kJx8koS8M6Na15KUasqdld+cmba5lLRemTyPF1eRVKvHKVZyiQldqFro7qGSsvcneAIVslk48myynzCxLZtg9N7gHVGSklIkg4Ud4dw8/CXxryxHVzTWojI3BhjTiDxBHQggEeYmmzrtmUpU+3TO6/n+Fx5MNfeOUeCNKzFCzZVtAcf+XAD6/wDKZNOupje/oMlC9LY/tGd1weXdouvQ5UyU7yR+26maLpzqFUHq7BfgCT7IXYaSRKu8Qd4m9WNqlacokb1qkavXYDwrnPOIvU3jgTW5rhRxwAPdJERlfOxBNRt1RqQv6mc72/dtWcUqehqHAHJU8/jn2yZ7S7b0IH2RwH4j19Jtsjs49NDXqDNSoMlMaonIevXpoORl2KNvZnzZOMXQhRtQiKi8EAA/c+Z4zRkj9kjzYWyu/rKpHhXxP/CPu+06e/pNkmoq2edBOcqXbLX2K2b3NAMww1Y756gYwg92v+IyyTAEzPLlLk22ezCKjFJGYQhOEwhCEAIQhACEIQCI7S7ES9t3t6mgcZVuaONVYeh5cxkc55u2lYVLas9Cuu69NsMOR5hlPNSMEHoZ6nlL+kLsYu0KYenhbikDuMdA449256Z4HkT0JlkJ09kJxtHCEeSFrcbhGuv/ANfL1+Xrwj6lNqTsjqUdCVZWGGQjiCOv9egjzQmZGi9bM2lnEslpfec5da3RTzHy9JY7DaORoc/MeokZQvonDJWmdFoXcfU7qUe22j5yUo7Q85S4l6kWxLmJV0V2DhmRgN3eQgEjOcHIOcH5mQqX3nFRe+c5R27JI0T/AO9V/mp/9s1WkAyszu5TO7vspAJGMgADXGR7TI83vnE3vvONnNEvUuo0e4LHA1Miam0F5k+gwPj/AKRjc7bIGEwg8uJ9SZ1RDZYK92lJfE2p959BKltvbhbI4Dko5+sY1rl3OFBJP9ayy9n9gIm7VqEVHOCD9xP4QeLeZ4cgJbHHW2USzLqJGbE2M6ulzdJnXNND9zozDkeYB4cePC7qwYZGoMwwDAg6gxjhqLaZZGP9D1l6SapdmWTkpW9r/g32hssk71Ncljqo6nmstWw9mChTC6Fm1Y9T0HkOH+8V2faYAZh4iNAfug/rJCZcuVy/HwbMOBRfLyZhCEpNIQhCAEIQgBCEIAQhCAE14zMzAKT287C079e8p4p3KDCvjwuBwSpj4NxHmNJwy+satvUalXRqbpxVh7iDwZTyI0M9USE7Sdmre+p7lwmSudyouBUQnmre7Q5BxqJZCfHshKCZ5vR45pVCDkHB6iWDtP2BurIs6r39EZPeIp3lH/MTivqMjTORwlWpvNEZJ7RllBrsnrbapGlRd7zGh/r3SXtrxG+zU3T0fT4yoo8XR5PT7RXtf4ui7oanLDejD9YqKlX8DfAymUqpX7JI9CR8o+pbRqjhUf8Anac/Tix+rkXosxer+BvlE2708Ru+rD9JCDaNU8aj/wAzTIqk8ST6kmdWKJx5p/RJPn7z+xf3iaoI2R4ujycYxXSKpTnLtjylgcNJJ7OvzTPVTxH6jzkOjya2PsatcYKLurzdsgf4fxH094kpOKX5dFcYycvx7LLb1A4BTxb3DHOTllY7uGfU8hyH+s02RslLdcJlmP2mPEnyHAD0+Mk5gnkvUej08WKlcuwmYTEqNBmEIQAhCEAIQhACEIQAmIQgGYTGZjeEA2hE+9E1NcQBWVPtB2Bsrslyho1DqalLCEnqy43W9SM+cspuRNTdrOptdHGk+zje1vouvKWTbslwvIAim/8AKx3f83slVvdl3FuSK9GpTxzdHC+x8bp9hnow3yzQ3yyxZmuyqWGL6PN9OpHCPO7XVjZ1Dmpb0XPVqVMn34zGLdndnH/01MemV+AMsWdeit4H7OPo8WR51tez+zxwtk9pY/Mx5b2FmhyltRUjmKVPPvxmd/XXoj+2fs5NZW1SqcUkd/4EZveQNJZ9m9i7p8FwtFfzEM3sVf1InRFvVGgwBNxfLIP5EvCJR+LH/Z2Q+y+yFCjhnBqsOb4wPRRp78yxgRsLsTYXIlMpOW2y+MIxVJDmERFcTbvROExSE13hM5gGOE2hMQDMIQgBCEIATBhMwDGJqRN4QBBlMTZTHcxiAMHQxBkaSu7MbggEK6NEHpvLB3QmO5WAVl6LxB6Dy2dwsx9WWAU97ap1iRtavWXT6qsPqqwClC1q9YqltU6y4fVVh9VWAVRaDxwlF5ZPqyzPcLAIFKTxZEaTIoCZ7oQCLRGi6IY+7sTOBAGqqYoqmL4mYBoAZsJmEA14TaE14QDaEIQDReHvm8IQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAhCEAIQhACEIQAmDCEARhCEA//9k=" /></div>
+        </div>
+        <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+          <nz-form-item>
+            <nz-form-label style="font-weight: bolder; font-family: 'Times New Roman', Times, serif;"  [nzSpan]="6" nzFor="string">Username</nz-form-label>
+            <nz-form-control [nzSpan]="15">
+              <input nz-input type="string" formControlName="name">
+            </nz-form-control>
+          </nz-form-item>
+    
+          <nz-form-item>
+            <nz-form-label style="font-weight: bolder; font-family: 'Times New Roman', Times, serif;"  [nzSpan]="6" nzFor="email">E-mail</nz-form-label>
+            <nz-form-control [nzSpan]="15">
+              <input nz-input type="email" formControlName="email">
+            </nz-form-control>
+          </nz-form-item>
+    
+          <nz-form-item>
+            <nz-form-label style="font-weight: bolder; font-family: 'Times New Roman', Times, serif;"  [nzSpan]="6" nzFor="password">Password</nz-form-label>
+            <nz-form-control [nzSpan]="15">
+              <input nz-input type="password" formControlName="password">
+            </nz-form-control>
+          </nz-form-item>
+    
+          <nz-form-item>
+            <nz-form-label style="font-weight: bolder; font-family: 'Times New Roman', Times, serif;"  [nzSpan]="6" nzFor="password">Confirm</nz-form-label>
+            <nz-form-control [nzSpan]="15">
+              <input nz-input type="password" formControlName="checkPassword">
+            </nz-form-control>
+          </nz-form-item>
+    
+          <nz-form-item>
+            <nz-form-label [nzSpan]="6"><img width="50px" src="data:image/png;base64,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"></nz-form-label>
+            <nz-form-control [nzSpan]="15">
+            <button style="font-weight: bolder; font-family: 'Times New Roman', Times, serif; margin-left: 10px; color: aliceblue; background-color: #003973;" nz-button [nzSize]="size" nzType="default" routerLink="/register">Register</button>
+            </nz-form-control>
+          </nz-form-item>
+        </form>
+      </div>
+    </div>
+  </nz-spin>
+</div>

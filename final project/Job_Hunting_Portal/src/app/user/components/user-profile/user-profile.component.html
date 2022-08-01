@@ -1,0 +1,39 @@
+<div style="height: 647px; background-image: url(https://img.freepik.com/free-vector/blue-pink-halftone-background_53876-99004.jpg?w=2000);">
+<div class="loginmain">
+    <nz-card style=" width:400px;height: 350px; background: #ffffff;
+        box-shadow: 
+          0px 2px 10px rgba(0,0,0,0.2), 
+          0px 10px 20px rgba(0,0,0,0.3), 
+          0px 30px 60px 1px rgba(0,0,0,0.5);border-radius: 25px;">
+        <form nz-form [formGroup]="validateForm">
+            <nz-form-item>
+                <h1 style="font-weight: bolder; font-size: x-large; font-family: 'Times New Roman', Times, serif;">My Profile</h1>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-label [nzSpan]="6" nzFor="string" style="font-weight: bolder; font-size: larger; font-family: 'Times New Roman', Times, serif;">Username</nz-form-label>
+                <nz-form-control nzHasFeedback [nzSpan]="15" nzErrorTip="This Input Is Required!">
+                    <input nz-input placeholder="Name" style="font-weight: bolder; font-size: larger; font-family: 'Times New Roman', Times, serif;" formControlName="name" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-label [nzSpan]="6" style="font-weight: bolder; font-size: larger; font-family: 'Times New Roman', Times, serif;" nzFor="email">E-mail</nz-form-label>
+                <nz-form-control nzHasFeedback [nzSpan]="15" nzErrorTip="This Input Is Required!">
+                    <input nz-input placeholder="Email" style="font-weight: bolder; font-size: larger; font-family: 'Times New Roman', Times, serif;" formControlName="email" [disabled]="true" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+                <nz-form-label [nzSpan]="6"> <img style="width: 50px;" src="https://c8.alamy.com/comp/J9F2XC/profile-blue-glossy-ball-web-icon-on-white-background-round-3d-render-J9F2XC.jpg" alt=""></nz-form-label>
+                <nz-form-control [nzSpan]="15">
+                    <button style="background-color: #003973; font-weight: bolder; font-size: larger; font-family: 'Times New Roman', Times, serif;" nz-button [nzSize]="size" nzType="primary" 
+                        (click)="submitForm()">Update Profile</button>
+                </nz-form-control>
+            </nz-form-item>
+
+        </form>
+
+    </nz-card>
+</div>
+</div>

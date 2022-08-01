@@ -1,0 +1,60 @@
+<div *ngIf="!isUserLoggedIn">
+  <nz-header class="main-header" nz-row nzType="flex" style="background-color: #003973;">
+    <div>
+      <a style="color: white; margin-left:50px; font-size: 18px;font-weight: bolder; font-family: 'Times New Roman', Times, serif;" routerLink="/login"><img style="height: 50px; width: 50px;" src="https://previews.123rf.com/images/dirkercken/dirkercken1402/dirkercken140200013/25598170-job-search-find-vacancy-for-jobs-dream-career-move-help-wanted-job-ad-recruitment-job-icon-job-butto.jpg">&nbsp; DREAM JOB</a>
+    </div>
+    <div class="nav-links">
+      <a style="font-weight: bolder; font-family: 'Times New Roman', Times, serif;" nz-button nzType="link" routerLink="/register">Sign Up</a>
+      <a style="font-weight: bolder; font-family: 'Times New Roman', Times, serif;"  nz-button nzType="link" routerLink="/login">Login</a>
+    </div>
+  </nz-header>
+
+  <nz-sider nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="0" class="mobile-sidenav">
+    <ul class="nav-links" nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item>
+        <a style="font-weight: bolder; font-family: 'Times New Roman', Times, serif;"  nz-button nzType="link" routerLink="/register">Sign Up</a>
+      </li>
+      <li nz-menu-item>
+        <a style="font-weight: bolder; font-family: 'Times New Roman', Times, serif;"  nz-button nzType="link" routerLink="/login">Login</a>
+      </li>
+    </ul>
+  </nz-sider>
+</div>
+<div *ngIf="isUserLoggedIn">
+  <nz-header class="main-header" nz-row nzType="flex" style="background-color: #003973;">
+    <div>
+      <a style="color: rgba(255, 255, 255, 0.968); margin-left:50px; font-size: 18px; font-weight: bolder; font-family: 'Times New Roman', Times, serif;" routerLink="/user/all-jobs"> <img style="height: 50px; width: 50px;" src="https://previews.123rf.com/images/dirkercken/dirkercken1402/dirkercken140200013/25598170-job-search-find-vacancy-for-jobs-dream-career-move-help-wanted-job-ad-recruitment-job-icon-job-butto.jpg">&nbsp; DREAM JOB</a>
+    </div>
+    <div class="nav-links">
+      <a style="font-weight: bolder; font-family: 'Times New Roman', Times, serif;"  nz-button nzType="link" routerLink="/user/dashboard" routerLinkActive="active">Dashboard</a>
+      <a style="font-weight: bolder; font-family: 'Times New Roman', Times, serif;"  nz-button nzType="link" routerLink="/user/all-jobs" routerLinkActive="active">Jobs</a>
+      <a style="font-weight: bolder; font-family: 'Times New Roman', Times, serif;"  nz-button nzType="link" routerLink="/user/search-job" routerLinkActive="active">Search</a>
+      <a style="font-weight: bolder; font-family: 'Times New Roman', Times, serif;"  nz-button nzType="link" routerLink="/user/user-profile" routerLinkActive="active">Profile</a>
+      <a style="font-weight: bolder; font-family: 'Times New Roman', Times, serif;"  nz-button nzType="link" routerLink="/user/setting" routerLinkActive="active">Setting</a>
+      <a style="font-weight: bolder; font-family: 'Times New Roman', Times, serif;"  nz-button nzType="link" (click)="logout()" routerLinkActive="active">Logout</a>
+    </div>
+  </nz-header>
+
+  <nz-sider nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="0" class="mobile-sidenav">
+    <ul style="font-weight: bolder; font-family: 'Times New Roman', Times, serif;"  class="nav-links" nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/user/dashboard" routerLinkActive="active">Dashboard</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/user/all-jobs" routerLinkActive="active">Jobs</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/user/search-job" routerLinkActive="active">Search</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/user/user-profile" routerLinkActive="active">Profile</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/user/setting" routerLinkActive="active">Setting</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" (click)="logout()" routerLinkActive="active">Logout</a>
+      </li>
+    </ul>
+  </nz-sider>
+</div>
